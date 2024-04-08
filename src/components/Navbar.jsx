@@ -10,8 +10,8 @@ const Navbar = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
 
   const handleLogout = async () => {
-    await axiosInstance
-      .get("/api/v1/user/patient/logout", {
+    await axios
+      .get("https://hotel-management-mern-4.onrender.com/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {

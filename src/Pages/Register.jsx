@@ -22,9 +22,9 @@ const Register = () => {
   const handleRegistration = async (e) => {
     e.preventDefault();
     try {
-      await axiosInstance
+      await axios
         .post(
-          "/api/v1/user/patient/register",
+          "https://hotel-management-mern-4.onrender.com/api/v1/user/patient/register",
           { firstName, lastName, email, phone, aadharNumber, dob, gender, password },
           {
             withCredentials: true,

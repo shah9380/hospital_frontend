@@ -15,9 +15,9 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await axiosInstance
+      await axios
         .post(
-          "/api/v1/user/login",
+          "https://hotel-management-mern-4.onrender.com/api/v1/user/login",
           { email, password, role: "Patient" },
           {
             withCredentials: true,

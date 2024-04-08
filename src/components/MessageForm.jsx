@@ -12,9 +12,9 @@ const MessageForm = () => {
   const handleMessage = async (e) => {
     e.preventDefault();
     try {
-      await axiosInstance
+      await axios
         .post(
-          "/api/v1/message/send",
+          "https://hotel-management-mern-4.onrender.com/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,
