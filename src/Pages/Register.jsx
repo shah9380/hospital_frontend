@@ -24,7 +24,7 @@ const Register = () => {
     try {
       await axios
         .post(
-          "https://hotel-management-mern-1.onrender.com/api/v1/user/patient/register",
+          "/api/v1/user/patient/register",
           { firstName, lastName, email, phone, aadharNumber, dob, gender, password },
           {
             withCredentials: true,

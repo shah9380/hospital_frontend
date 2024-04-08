@@ -14,7 +14,7 @@ const MessageForm = () => {
     try {
       await axios
         .post(
-          "https://hotel-management-mern-1.onrender.com/api/v1/message/send",
+          "/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,

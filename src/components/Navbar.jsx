@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://hotel-management-mern-1.onrender.com/api/v1/user/patient/logout", {
+      .get("/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {

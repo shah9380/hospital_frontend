@@ -34,7 +34,7 @@ const AppointmentForm = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "https://hotel-management-mern-1.onrender.com/api/v1/user/doctors",
+        "/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
@@ -47,7 +47,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "https://hotel-management-mern-1.onrender.com/api/v1/appointment/create",
+        "/api/v1/appointment/create",
         {
           firstName,
           lastName,
