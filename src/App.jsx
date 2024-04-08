@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+import axiosInstance from "../axiosConfig";;
 import { Context } from "./main";
 import Login from "./Pages/Login";
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(
+        const response = await axiosInstance.get(
           "/api/v1/user/patient/profile",
           {
             withCredentials: true,

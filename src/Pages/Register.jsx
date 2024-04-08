@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosInstance from "../axiosConfig";;
 import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
@@ -22,7 +22,7 @@ const Register = () => {
   const handleRegistration = async (e) => {
     e.preventDefault();
     try {
-      await axios
+      await axiosInstance
         .post(
           "/api/v1/user/patient/register",
           { firstName, lastName, email, phone, aadharNumber, dob, gender, password },

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import axios from "axios";
+import axiosInstance from "../axiosConfig";;
 import { toast } from "react-toastify";
 import { Context } from "../main";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
 
   const handleLogout = async () => {
-    await axios
+    await axiosInstance
       .get("/api/v1/user/patient/logout", {
         withCredentials: true,
       })
